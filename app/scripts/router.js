@@ -32,10 +32,9 @@ var MainRouter = Backbone.Router.extend({
 	showTemp: function(name){
 		this.weather.fetch({success: function(weatherDataResponse){
 			new WeatherView({model: weatherDataResponse});
-		}});
+		// console.log('this', weatherDataResponse);
 
-
-		if (weatherDataResponse.get('main').temp > 60){
+		if (this.model.get('temp') > 60){
 			var weatherHot = new EtsyItemsCollection();
 			weatherHot.url += '&keywords=sunglasses';
 			new ListView({model: etsyItem});
@@ -46,7 +45,11 @@ var MainRouter = Backbone.Router.extend({
 			new ListView({model: etsyItem});
 
 		}
+		}});
 	}
 
 
 });
+// want to create an if else statement. if temp = x, new etsy collection.
+// if temp = y new etsy collection. had weatherHot in initialize and showTemp. after 
+// showTemp this.weather.fetch, cant seem to get weather defined outside of that function.

@@ -1,0 +1,39 @@
+?({
+   "coord":{
+      "lon":-82.39,
+      "lat":34.85
+   },
+   "sys":{
+      "message":0.004,
+      "country":"US",
+      "sunrise":1394106678,
+      "sunset":1394148601
+   },
+   "weather":[
+      {
+         "id":804,
+         "main":"Clouds",
+         "description":"overcast clouds",
+         "icon":"04d"
+      }
+   ],
+   "base":"cmc stations",
+   "main":{
+      "temp":40.06,
+      "pressure":1019,
+      "humidity":41,
+      "temp_min":39.2,
+      "temp_max":41
+   },
+   "wind":{
+      "speed":16.44,
+      "deg":54.0005
+   },
+   "clouds":{
+      "all":90
+   },
+   "dt":1394138100,
+   "id":4580543,
+   "name":"Greenville",
+   "cod":200
+}));
