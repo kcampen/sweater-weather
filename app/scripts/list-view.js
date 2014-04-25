@@ -15,18 +15,18 @@ var ListView = Backbone.View.extend({
 	}
 });
 
-var WeatherView = Backbone.View.extend({
+// var WeatherView = Backbone.View.extend({
 
-	createTemplate: _.template($('#weather-template').text()),
+// 	createTemplate: _.template($('#weather-template').text()),
 
-	initialize: function(){
+// 	initialize: function(){
 
-		$('.browse').html(this.el);
-		this.render();
-	},
-	render: function(){
-		var renderTemplate = this.createTemplate({model: this.model});
+// 		$('.browse').html(this.el);
+// 		this.render();
+// 	},
+// 	render: function(){
+// 		var renderTemplate = this.createTemplate({model: this.model});
 
-		this.$el.html(renderTemplate);
-	}
-});
+// 		this.$el.html(renderTemplate);
+// 	}
+// });

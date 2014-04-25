@@ -7,7 +7,7 @@ var MainRouter = Backbone.Router.extend({
 	},
 	
 	initialize: function(){
-		this.weather = new WeatherData();
+		// this.weather = new WeatherData();
 		this.items = new EtsyItemsCollection();
 		this.items.on('add', function(item){
 			new ListView({model: item});
@@ -26,22 +26,22 @@ var MainRouter = Backbone.Router.extend({
 
 	// },
 	showSweater: function(keyword){
-		// $('browse').html('');
+		$('browse').html('');
 
-		// this.items.url += ('&keywords=' + keyword);
+		this.items.url += ('&keywords=' + keyword);
 
-		// this.items.fetch();
+		this.items.fetch();
 
-	},
-	showTemp: function(name){
-		this.weather.fetch({success: function(weatherDataResponse){
-			new WeatherView({model: weatherDataResponse});
-			 console.log('this', weatherDataResponse);
+	}
+	// showTemp: function(name){
+	// 	this.weather.fetch({success: function(weatherDataResponse){
+	// 		new WeatherView({model: weatherDataResponse});
+	// 		 console.log('this', weatherDataResponse);
 
-			 EtsyItem.url += '&keywords=sunglasses';
+	// 		 EtsyItem.url += '&keywords=sunglasses';
 
 
-				this.items.fetch();
+	// 			this.items.fetch();
 
 		// if (weatherDataResponse.get('main').temp > 60){
 		// 	console.log('yes?', weatherDataResponse.get('main').temp)
@@ -55,8 +55,8 @@ var MainRouter = Backbone.Router.extend({
 		// 	new ListView({model: etsyItem});
 
 		// }
-		}});
-	}
+		// }});
+	// }
 
 
 });
